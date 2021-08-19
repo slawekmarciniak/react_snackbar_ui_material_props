@@ -45,7 +45,6 @@ export default function PositionedSnackbar({ snackbarOptions }) {
         anchorOrigin={{ vertical, horizontal }}
         open={open}
         onClose={handleClose}
-        // message="I love snacks"
         key={vertical + horizontal}
         autoHideDuration={duration}
       >
