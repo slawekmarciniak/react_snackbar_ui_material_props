@@ -4,15 +4,9 @@ import Snackbar from "@material-ui/core/Snackbar";
 import SnackbarContent from "@material-ui/core/SnackbarContent";
 import "./style.css";
 
-export default function PositionedSnackbar({ snackbarOptions }) {
-  const {
-    positionVertical,
-    positionHorizontal,
-    duration,
-    snackBackground,
-    snackColor,
-    snackFontSize,
-  } = snackbarOptions;
+export default function PositionedSnackbar({ snackbarOptions, snackbarType }) {
+  const { positionVertical, positionHorizontal, duration } = snackbarOptions;
+  const { snackBackground, snackColor, snackFontSize } = snackbarType;
   const [state, setState] = React.useState({
     open: false,
     vertical: "top",
