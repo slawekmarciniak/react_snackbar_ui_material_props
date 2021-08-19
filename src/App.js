@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import PositionedSnackbar from "./components/PositionedSnackbar";
+
+const snackbarOptions = {
+  positionVertical: "bottom",
+  positionHorizontal: "center",
+  duration: 5000,
+  snackBackground: "#3498db",
+  snackColor: "#2c3e50",
+  snackFontSize: 20,
+};
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <PositionedSnackbar snackbarOptions={snackbarOptions} />
     </div>
   );
 }
